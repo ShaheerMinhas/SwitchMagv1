@@ -1,7 +1,7 @@
 export const blogList = [
   {
     id: 1,
-    title: '7 CSS tools you should be using ',
+    title: 'Shaheer Is Awesome',
     category: 'development',
     subCategory: ['frontend', 'ui/ux', 'design'],
     description:
