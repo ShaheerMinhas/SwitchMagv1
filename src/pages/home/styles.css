@@ -6,7 +6,12 @@
   }
   
   .blog-list-container {
-    padding-top: 100px;
+   
+      max-width: 1140px;
+      width: 95%;
+      margin: 0 auto;
+      padding: 1rem 0;
+    
     /* Optional: Add specific styles for the BlogList container */
   }
   .divider {

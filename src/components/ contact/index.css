@@ -1,0 +1,97 @@
+/* index.css */
+
+.contact-us-section {
+  display: flex;
+  flex-direction: column;
+  background-color: purple;
+  color: white;
+  padding: 20px;
+}
+
+.contact-form,
+.contact-details {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-left: 19%;
+}
+
+/* Use media queries for responsive design */
+@media screen and (min-width: 768px) {
+  .contact-us-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    padding: 40px;
+  }
+
+  .contact-form {
+    flex: 1;
+    padding-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .contact-details {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+/* Style form elements */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+textarea {
+  width: 100%;
+  max-width: 300px; /* Set maximum width for better appearance */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Rounded corners */
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+/* Typing animation */
+input[type="email"],
+textarea {
+  animation: typing 1s steps(40) forwards;
+  opacity: 0;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #544de2;
+}
