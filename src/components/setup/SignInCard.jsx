@@ -65,7 +65,7 @@ const SignUpForm = () => {
       </Typography>
       <Typography variant="body2" style={{ marginTop: '0.5rem' }}>
         <Link href="#" onClick={() => console.log('Forgot password')}>Forgot password?</Link>
-      </Typography>
+      </Typography> 
     </StyledPaper>
   );
 };
