@@ -1,23 +1,43 @@
+/* styles.css */
+
+/* Other existing styles */
+
 .home-header {
-    text-align: center;
-  }
-  
-  .home-header h2 {
-    color: #0080ff;
-    font-size: 2rem;
-  }
-  
-  .home-header h1 {
-    font-size: 3rem;
-    color: #0f52ba;
-    margin-bottom: 1rem;
-  }
-  
-  .home-header h1 span {
-    color: purple;
-  }
-  
-  .home-header p {
-    color: #a9a9a9;
-    font-weight: 500;
-  }
+  /* Your header styles */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-text {
+  text-align: center; /* Center-align the text */
+}
+
+.header-text h1 {
+  color: purple; /* Set the font color to purple */
+}
+.header-text p{
+  color: aliceblue;
+}
+.join-button {
+  /* Styles for the 'Join Us' button */
+}
+
+/* Example button styles (customize as needed) */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #544de2;
+}
