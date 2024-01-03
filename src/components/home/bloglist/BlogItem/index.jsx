@@ -19,7 +19,7 @@ const BlogItem = ({
     <div className='blogItem-wrap'>
       <img className='blogItem-cover' src={cover} alt='cover' />
       
-      <h3>{title}</h3>
+      <h3 className='title-cover'>{title}</h3>
       <p className='blogItem-desc'>{description}</p>
       <footer>
         <div className='blogItem-author'>
