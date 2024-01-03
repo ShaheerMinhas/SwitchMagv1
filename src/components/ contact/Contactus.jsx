@@ -6,7 +6,7 @@ const ContactUs = () => {
     <div className="contact-us-section">
       <div className="contact-form">
         <h2>Contact Us</h2>
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" netlify>
           <input type="hidden" name="form-name" value="contact" />
           <div className="form-group">
             <label htmlFor="email">Email:</label>
