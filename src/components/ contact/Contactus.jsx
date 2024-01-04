@@ -27,8 +27,8 @@ const ContactUs = () => {
     <div className="contact-us-section">
       <div className="contact-form">
         <h2>Contact Us</h2>
-        <form name="contact" method="POST" onSubmit={handleSubmit}>
-          
+        <form name="contact" method="POST" >
+          <input type="hidden" name="form-name" value="contact"/>
           <div className="form-group">
             <label htmlFor="email">Email:</label>
             <input
