@@ -10,11 +10,11 @@ const ContactUs = () => {
           <input type="hidden" name="form-name" value="contact" />
           <div className="form-group">
             <label htmlFor="email">Email:</label>
-            <input type="text" id="email" name="email" placeholder="Your email..." required />
+            <input type="text" id="email" name="email" placeholder="Your email..." className="feedback-input" required />
           </div>
           <div className="form-group">
             <label htmlFor="feedback">Feedback:</label>
-            <textarea id="feedback" name="feedback" placeholder="Your feedback..." required></textarea>
+            <textarea id="feedback" name="feedback" placeholder="Your feedback..." className="feedback-input" required></textarea>
           </div>
           <button type="submit">Submit</button>
         </form>
