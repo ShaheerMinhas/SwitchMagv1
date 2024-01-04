@@ -2,30 +2,45 @@ import React from 'react';
 import './index.css'; // You can create and import a CSS file for styling
 
 const ContactUs = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault(); // Prevents the default form submission behavior (page refresh)
 
-    // Add code here to handle the form submission (e.g., send data to Netlify or perform other actions)
-    // For demonstration purposes, you can log the form data to the console
-    const formData = new FormData(event.target);
-    for (let [name, value] of formData.entries()) {
-      console.log(`${name}: ${value}`);
-    }
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "", 
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { target } = e;
+    const { name, value } = target;
+
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
   };
 
   return (
     <div className="contact-us-section">
       <div className="contact-form">
         <h2>Contact Us</h2>
-        <form name="contact" netlify onSubmit={handleSubmit}>
-          <input type="hidden" name="form-name" value="contact" />
+
+        <form name="contact" method="POST">
+          
           <div className="form-group">
             <label htmlFor="email">Email:</label>
-            <input type="text" id="email" name="email" placeholder="Your email..." className="feedback-input" required />
+            <input type="text" id="email" name="email" value={form.email} onChange={handleChange} placeholder="Your email..." className="feedback-input" required />
           </div>
           <div className="form-group">
             <label htmlFor="feedback">Feedback:</label>
-            <textarea id="feedback" name="feedback" placeholder="Your feedback..." className="feedback-input" required></textarea>
+            <textarea id="feedback" name="feedback" value={form.message} onChange={handleChange} placeholder="Your feedback..." className="feedback-input" required></textarea>
+
           </div>
           <button type="submit">Submit</button>
         </form>
