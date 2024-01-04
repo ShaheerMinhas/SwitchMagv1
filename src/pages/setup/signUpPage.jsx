@@ -1,16 +1,17 @@
 import React from 'react'
 import Headersetup from '../../components/setup/Headersetup'
 import BackgroundImg from '../../components/setup/BackgroundImg'
-import SignInForm from '../../components/setup/SignInCard'
+import SignUpForm from '../../components/setup/SignUpCard'
 
-function SignInPage() {
+
+function SignUpPage() {
   return (
     <>
     <Headersetup />
     <BackgroundImg />
-    <SignInForm />
+    <SignUpForm />
     </>
   )
 }
 
-export default SignInPage
+export default SignUpPage

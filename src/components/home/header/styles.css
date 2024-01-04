@@ -17,7 +17,7 @@
 }
 
 .header-text h1 {
-  color: purple; /* Set the font color to purple */
+  color: #800080; /* Set the font color to purple */
 }
 .header-text p{
   color: aliceblue;
@@ -30,7 +30,7 @@
 button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #6c63ff;
+  background-color: #800080;
   color: white;
   border: none;
   border-radius: 5px;

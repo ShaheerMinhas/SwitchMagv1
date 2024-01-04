@@ -26,17 +26,26 @@ const WhiteTextField = styled(TextField)({
   },
 });
 
-const SignInForm = () => {
-  
+const SignUpForm = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add logic to handle form submission
+  };
 
   return (
     <StyledPaper>
       <Typography variant="h5" gutterBottom>
-        Sign In
+        Sign Up
       </Typography>
-      <form>
-        
-      <WhiteTextField
+      <form onSubmit={handleSubmit}>
+        <WhiteTextField
+          label="Name"
+          variant="outlined"
+          margin="normal"
+          fullWidth
+          required
+        />
+        <WhiteTextField
           label="Email"
           variant="outlined"
           margin="normal"
@@ -44,7 +53,6 @@ const SignInForm = () => {
           required
           type="name"
         />
-       
         <WhiteTextField
           label="Password"
           variant="outlined"
@@ -53,19 +61,30 @@ const SignInForm = () => {
           required
           type="password"
         />
+        <WhiteTextField
+          label="Date of Birth"
+          variant="outlined"
+          margin="normal"
+          fullWidth
+          required
+          type="date"
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
         <Button type="submit" variant="contained" color="primary" fullWidth>
-          Sign In
+          Sign Up
         </Button>
       </form>
       <Typography variant="body2" style={{ marginTop: '1rem' }}>
-        Dont have an account?{' '}
-        <Link to="/signup">Sign Up</Link>
+        Already have an account?{' '}
+        <Link to="/signin">Log In</Link>
       </Typography>
       <Typography variant="body2" style={{ marginTop: '0.5rem' }}>
         <Link href="#" onClick={() => console.log('Forgot password')}>Forgot password?</Link>
-      </Typography> 
+      </Typography>
     </StyledPaper>
   );
 };
 
-export default SignInForm;
+export default SignUpForm;

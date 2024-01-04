@@ -1,18 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import Blog from './pages/blogs';
 import SignInPage from './pages/setup/SignInPage';
+import SignUpPage from './pages/setup/signUpPage';
+ // Import your LoadingIndicator component
 import './App.css';
+import PixelArtLoader from './components/common/loading/PixelArtLoader';
+
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate fetching data or any asynchronous operation
+    const fetchData = async () => {
+      // Set loading to true initially
+      setLoading(true);
+      
+      // Perform some async operation (e.g., fetching data from an API)
+      try {
+        // Simulated API call using setTimeout
+        await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulating a delay of 2 seconds
+        setLoading(false); // Set loading to false when data is fetched
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setLoading(false); // Set loading to false in case of an error
+      }
+    };
+
+    fetchData();
+  }, []); // Run this effect only once, similar to componentDidMount
+
   return (
     <div className='container'>
-      <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route path="/blog/:id" element={<Blog/>} />
-        <Route path="/signin" element={<SignInPage />} />
-
-      </Routes>
+      {loading ? (
+        <PixelArtLoader/>
+      ) : (
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/blog/:id" element={<Blog />} />
+          <Route path="/signin" element={<SignInPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+        </Routes>
+      )}
     </div>
   );
 }

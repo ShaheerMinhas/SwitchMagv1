@@ -9,8 +9,8 @@ const ContactUs = () => {
         <form name="contact" netlify>
           <input type="hidden" name="form-name" value="contact" />
           <div className="form-group">
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your email..." required />
+            <label htmlFor="email">Email:
+            <input type="text" id="email" name="email" placeholder="Your email..." required /></label>
           </div>
           <div className="form-group">
             <label htmlFor="feedback">Feedback:</label>
