@@ -1,20 +1,15 @@
-import React ,{useRef,useState} from 'react';
+import React, { useRef, useState } from 'react';
 import './index.css'; // You can create and import a CSS file for styling
 
 const ContactUs = () => {
-
-  const formRef = useRef();
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "", 
+    name: '',
+    email: '',
+    message: '', 
   });
 
-  const [loading, setLoading] = useState(false);
-
   const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
+    const { name, value } = e.target;
 
     setForm({
       ...form,
@@ -24,23 +19,40 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Handle form submission logic here
+    console.log(form); // Example: Logging form data
   };
 
   return (
     <div className="contact-us-section">
       <div className="contact-form">
         <h2>Contact Us</h2>
-
-        <form name="contact" method="POST">
+        <form name="contact" method="POST" onSubmit={handleSubmit}>
           
           <div className="form-group">
             <label htmlFor="email">Email:</label>
-            <input type="text" id="email" name="email" value={form.email} onChange={handleChange} placeholder="Your email..." className="feedback-input" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="Your email..."
+              className="feedback-input"
+              required
+            />
           </div>
           <div className="form-group">
             <label htmlFor="feedback">Feedback:</label>
-            <textarea id="feedback" name="feedback" value={form.message} onChange={handleChange} placeholder="Your feedback..." className="feedback-input" required></textarea>
-
+            <textarea
+              id="feedback"
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+              placeholder="Your feedback..."
+              className="feedback-input"
+              required
+            ></textarea>
           </div>
           <button type="submit">Submit</button>
         </form>
