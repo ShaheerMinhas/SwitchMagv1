@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css'; // You can create and import a CSS file for styling
 
 const ContactUs = () => {
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -24,10 +25,12 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
   return (
     <div className="contact-us-section">
       <div className="contact-form">
         <h2>Contact Us</h2>
+
         <form name="contact" method="POST">
           
           <div className="form-group">
@@ -36,7 +39,8 @@ const ContactUs = () => {
           </div>
           <div className="form-group">
             <label htmlFor="feedback">Feedback:</label>
-            <textarea id="feedback" name="feedback" value={form.email} onChange={handleChange} placeholder="Your feedback..." className="feedback-input" required></textarea>
+            <textarea id="feedback" name="feedback" value={form.message} onChange={handleChange} placeholder="Your feedback..." className="feedback-input" required></textarea>
+
           </div>
           <button type="submit">Submit</button>
         </form>
