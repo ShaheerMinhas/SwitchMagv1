@@ -51,7 +51,7 @@ const SignUpForm = () => {
           margin="normal"
           fullWidth
           required
-          type="name"
+          type="email"
         />
         <WhiteTextField
           label="Password"
