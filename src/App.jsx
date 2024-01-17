@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/home';
-import Blog from './pages/blogs';
 import SignInPage from './pages/setup/SignInPage';
 import SignUpPage from './pages/setup/signUpPage';
  // Import your LoadingIndicator component
 import './App.css';
 import PixelArtLoader from './components/common/loading/PixelArtLoader';
+import Blog from './pages/Blog';
+import theme from './components/common/Theme/Theme';
 
 function App() {
   const [loading, setLoading] = useState(true);
