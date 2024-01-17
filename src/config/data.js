@@ -74,8 +74,8 @@ export const blogList = [
     subCategory: ['frontend', 'ui/ux', 'design'],
     description: projectContent,
     authorName: 'John Doe',
-    authorAvatar: '/assets/images/fyp1.png',
+    authorAvatar: '/assets/images/fypv1.png',
     createdAt: 'January 17, 2024',
-    cover: '/assets/images/fyp1.png',
+    cover: '/assets/images/fypv1.png',
   }
 ];
