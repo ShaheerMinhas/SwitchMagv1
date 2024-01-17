@@ -41,7 +41,7 @@ const Blog = () => {
           <img src={blog.cover} alt='cover' />
           <div className="blog-text">
             <Typography>
-          <ReactMarkdown>{blog.description}</ReactMarkdown>
+          <ReactMarkdown className="wrapText">{blog.description}</ReactMarkdown>
           </Typography>  </div>
         </div>
       ) : (

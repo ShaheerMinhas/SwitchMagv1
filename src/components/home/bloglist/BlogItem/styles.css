@@ -8,7 +8,7 @@
   object-fit: cover;
   border-radius: 20px;
   margin-bottom: 0.5rem;
-  color: white;
+  color: rgb(26, 26, 26);
 }
 .blogItem-wrap h3 {
   margin: 0.5rem 0 1rem 0;
@@ -16,7 +16,7 @@
 }
 
 .title-cover{
-  color: aliceblue;
+  color: #37003c;
 }
 .blogItem-desc {
   position: relative;
@@ -24,7 +24,7 @@
   overflow: hidden;
   padding-right: 0.6rem;
   font-size: 0.8rem;
-  color: #eed9d9;
+  color: #181717;
 }
 
 .blogItem-desc::before {
