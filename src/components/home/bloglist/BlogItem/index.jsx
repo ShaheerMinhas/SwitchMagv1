@@ -15,25 +15,28 @@ const BlogItem = ({
     id,
   },
 }) => {
+  const linkStyle = {
+    textDecoration: 'none', // Remove underline
+    color: 'inherit',       // Inherit text color from parent
+  };
+
   return (
-    <div className='blogItem-wrap'>
-      <img className='blogItem-cover' src={cover} alt='cover' />
-      
-      <h3 className='title-cover'>{title}</h3>
-      <p className='blogItem-desc'>{description}</p>
-      <footer>
-        <div className='blogItem-author'>
-          <img src={authorAvatar} alt='avatar' />
-          <div>
-            <h6>{authorName}</h6>
-            <p>{createdAt}</p>
+    <Link className='blogItem-wrap' to={`/blog/${id}`} style={linkStyle}>
+      <div>
+        <img className='blogItem-cover' src={cover} alt='cover' />
+        
+        <h3 className='title-cover'>{title}</h3>
+        <p className='blogItem-desc'>{description}</p>
+        <footer>
+          <div className='blogItem-author'>
+            <div>
+              <p>{createdAt}</p>
+            </div>
           </div>
-        </div>
-        <Link className='blogItem-link' to={`/blog/${id}`}>
-          ➝
-        </Link>
-      </footer>
-    </div>
+          <div className='blogItem-link'>➝</div>
+        </footer>
+      </div>
+    </Link>
   );
 };
 

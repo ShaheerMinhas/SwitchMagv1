@@ -3,13 +3,17 @@
 /* Other existing styles */
 
 .home-header {
-  /* Your header styles */
+  align-items: center;
 }
 
 .header-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Align items with space between them */
   align-items: center;
+}
+
+.headSize {
+  color: #ac07ac;
 }
 
 .header-text {
@@ -17,10 +21,12 @@
 }
 
 .header-text h1 {
-  color: #800080; /* Set the font color to purple */
+  color: #ac07ac; /* Set the font color to purple */
+  font-size: 75px; /* Increase the font size */
+  margin-bottom: 0; /* Remove default margin */
 }
-.header-text p{
-  color: aliceblue;
+.themebutton {
+margin-right: 0%;
 }
 .join-button {
   /* Styles for the 'Join Us' button */
