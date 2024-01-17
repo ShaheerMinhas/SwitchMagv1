@@ -4,9 +4,15 @@
 }
 .blog-text{
   color: rgb(0, 0, 0);
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 33%;
+  margin-bottom: 3%;
+  
 }
 .blog-title{
   color: rgb(0, 0, 0);
+  
 }
 .blog-goBack {
   text-decoration: none;
@@ -17,9 +23,11 @@
   display: block;
 }
 .blog-wrap header {
-  text-align  : center;
+  text-align: center;
 }
-
+.upperPortion {
+  margin-bottom: 3%;
+}
 .blog-date {
   font-size: 0.8rem;
   color: #272525;

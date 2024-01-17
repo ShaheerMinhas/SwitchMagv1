@@ -19,25 +19,25 @@ By refining this aspect of sign language recognition, the project seeks to provi
 
 These algorithms are integral for the initial stages of the project.
 
-**Data Collection and Frame Processing:** The process begins with collecting a dataset comprising PSL videos. This dataset undergoes a two-step processing:
+**Data Collection and Frame Processing:** The process begins with collecting a dataset comprising PSL videos. This dataset undergoes a two-step processing
+    
+1 Frame Extraction  Individual frames are extracted from each video to capture specific sign language gestures
 
-    1. Frame Extraction  Individual frames are extracted from each video to capture specific sign language gestures.
-
-    2. Pre-Processing: These frames are then pre-processed to remove background noise, facilitating clearer landmark detection.
+2 Pre-Processing: These frames are then pre-processed to remove background noise, facilitating clearer landmark detection
 
 
 **Landmark Detection and Classification:** The selected landmark detection algorithm is applied to the processed frames to identify key hand points, which are essential for tracking hand movements.
 
-    1. Frame Storage: The frames with detected landmarks are stored for further analysis.
+1. Frame Storage: The frames with detected landmarks are stored for further analysis.
 
-    2. Classification with LSTM: These frames are classified using an LSTM classifier, which involves a two-phase process of testing (with known labels) and training (using the testing dataset) to evaluate the model's accuracy.
+2. Classification with LSTM: These frames are classified using an LSTM classifier, which involves a two-phase process of testing (with known labels) and training (using the testing dataset) to evaluate the model's accuracy.
 
 
 **Accuracy Enhancement and Correction:** The project places significant emphasis on improving recognition accuracy.
 
-    1. Manual Correction: Identified landmarks are manually reviewed and corrected for any misidentifications caused by the initial algorithms.
+1. Manual Correction: Identified landmarks are manually reviewed and corrected for any misidentifications caused by the initial algorithms.
 
-    2. Re-evaluation: Post-correction, the model is re-trained and tested. This phase involves comparing the accuracies pre- and post-correction to gauge improvements.
+2. Re-evaluation: Post-correction, the model is re-trained and tested. This phase involves comparing the accuracies pre- and post-correction to gauge improvements.
 
 
 **Real-Time Application Development:** As a final step, the project aims to extend the refined model for real-time sign language recognition, making it applicable on devices equipped with webcams. This extension is pivotal for practical, real-world applications, enhancing the accessibility and utility of the developed system.

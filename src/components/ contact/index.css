@@ -12,12 +12,10 @@
 .contact-details {
   width: 100%;
   margin-bottom: 20px;
-  margin-left: 19%;
 }
-/* index.css */ 
 
 .feedback-input {
-  width: 55%;
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -33,15 +31,14 @@
     padding: 40px;
   }
 
-  .contact-form {
-    flex: 1;
-    padding-right: 20px;
-    margin-bottom: 0;
-  }
-
+  .contact-form,
   .contact-details {
     flex: 1;
     margin-bottom: 0;
+  }
+
+  .contact-form {
+    margin-right: 20px;
   }
 }
 
@@ -57,8 +54,8 @@ label {
 
 input[type="email"],
 textarea {
-  width: 100%;
-  max-width: 300px; /* Set maximum width for better appearance */
+  width: 70%;
+  max-width: 70%; /* Set maximum width for better appearance */
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -103,4 +100,17 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #544de2;
+}
+
+/* Additional styles for phone responsiveness */
+@media screen and (max-width: 767px) {
+  .contact-us-section {
+    padding: 20px;
+  }
+
+  .contact-form,
+  .contact-details {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

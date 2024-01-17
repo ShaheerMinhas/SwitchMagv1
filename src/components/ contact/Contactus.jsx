@@ -60,9 +60,7 @@ const ContactUs = () => {
       <div className="contact-details">
         <h2>Other Details</h2>
         {/* Other contact details */}
-        <p>Address: 123 Example Street</p>
-        <p>Email: example@email.com</p>
-        <p>Phone: 123-456-7890</p>
+        <p>Email: switch.magazine1@gmail.com</p>
       </div>
     </div>
   );

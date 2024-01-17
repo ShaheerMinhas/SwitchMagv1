@@ -7,14 +7,13 @@ import ContactUs from '../../components/ contact/Contactus';
 const Home = () => {
   return (
     <div>
-    <div className="home-container">
+    
       <Header />
       <div className='divider'></div>
       <div className="blog-list-container">
         <BlogList blogs={blogList} />
       </div>
      
-    </div>
     <div className="contact-home"> <ContactUs /></div>
 
  </div>
