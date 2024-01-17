@@ -21,7 +21,7 @@
 }
 
 .header-text h1 {
-  color: #ac07ac; /* Set the font color to purple */
+  color: #2c2c2c; /* Set the font color to purple */
   font-size: 75px; /* Increase the font size */
   margin-bottom: 0; /* Remove default margin */
 }
@@ -36,7 +36,7 @@ margin-right: 0%;
 button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #800080;
+  background-color: #37003c;
   color: white;
   border: none;
   border-radius: 5px;
@@ -45,5 +45,5 @@ button {
 }
 
 button:hover {
-  background-color: #544de2;
+  background-color: #433172;
 }
