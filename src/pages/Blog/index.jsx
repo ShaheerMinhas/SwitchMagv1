@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { Typography, Grid } from '@mui/material';
 import Header from '../../components/home/header/Index';
 import ContactUs from '../../components/ contact/Contactus';
+import AudioPlayer from '../../components/Audio/Audioplayer';
 const Blog = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
@@ -39,7 +40,7 @@ const Blog = () => {
                     <h1 className='blog-title'>{blog.title}</h1>
                   </Typography>
                 </header>
-               
+               <AudioPlayer/>
               </div>
 
             ) : (
@@ -63,6 +64,7 @@ const Blog = () => {
   {blog && (
     <ReactMarkdown>{blog.description}</ReactMarkdown>
   )}
+  
 </Typography>
 
                 </div>
