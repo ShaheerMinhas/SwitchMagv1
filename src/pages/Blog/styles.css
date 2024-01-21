@@ -2,18 +2,35 @@
   max-width: 700px;
   margin: 0 auto;
 }
-.blog-text{
+
+.blog-text {
   color: rgb(0, 0, 0);
   justify-content: center;
-  margin-left: 5%;
-  margin-right: 33%;
-  margin-bottom: 3%;
-  
+  margin: 0 5%;
 }
-.blog-title{
+
+.blog-title {
   color: rgb(0, 0, 0);
-  
 }
+
+.blog-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Add this style for centering AudioPlayer */
+.audio-player-container {
+  display: flex;
+  justify-content: center;
+  
+  margin-top: 80px; 
+  margin-bottom: 40px;/* Adjust the margin as needed */
+}
+
+
 .blog-goBack {
   text-decoration: none;
   font-size: 0.8rem;
@@ -22,12 +39,15 @@
   margin-bottom: 2rem;
   display: block;
 }
+
 .blog-wrap header {
   text-align: center;
 }
+
 .upperPortion {
   margin-bottom: 3%;
 }
+
 .blog-date {
   font-size: 0.8rem;
   color: #272525;
@@ -42,16 +62,31 @@
   display: flex;
   justify-content: center;
 }
+
 .blog-subCategory > div {
   margin: 1rem;
 }
+
 .blog-desc {
   padding: 1rem;
   margin-top: 1.5rem;
 }
+
 .divider {
-  /* Add a grey line (border) to act as a divider */
-  border-top: 1px solid #312f2f; /* Change color and width as needed */
-  margin-top: 10px; /* Adjust spacing above the line as needed */
-  margin-bottom: 10px; /* Adjust spacing below the line as needed */
+  border-top: 1px solid #312f2f;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Media Query for Phones */
+@media only screen and (max-width: 600px) {
+  .blog-text {
+    margin: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .blog-goBack {
+    margin-bottom: 1rem;
+  }
 }
