@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { storage } from '../../firebase';
 import { ref, getDownloadURL } from 'firebase/storage';
 
-const AudioPlayer = () => {
+const AudioPlayer = (props) => {
   const [audioUrl, setAudioUrl] = useState('');
 
   useEffect(() => {
-    const audioStorageRef = ref(storage, 'https://firebasestorage.googleapis.com/v0/b/audioplayer-33956.appspot.com/o/2%20Jan%2C%20Sukhan%2C%20I1.m4a?alt=media&token=23f5f237-3938-48f9-a893-ff48790ae652');
+    // Correct usage of ref function
+    const audioStorageRef = ref(storage, props.url);
 
     getDownloadURL(audioStorageRef)
       .then((url) => {
@@ -15,7 +16,7 @@ const AudioPlayer = () => {
       .catch((error) => {
         console.error('Error getting download URL:', error);
       });
-  }, []);
+  }, [props.url]); // Adding props.url to the dependency array to react to changes
 
   return (
     <div>

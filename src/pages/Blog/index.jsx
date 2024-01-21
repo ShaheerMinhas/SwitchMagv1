@@ -44,7 +44,7 @@ const Blog = () => {
                   </header>
                   {/* AudioPlayer container with centered styling */}
                   <div className='audio-player-container'>
-                    <AudioPlayer />
+                    <AudioPlayer url={blog.audio}/>
                   </div>
                 </div>
               ) : (
@@ -53,7 +53,6 @@ const Blog = () => {
             </div>
           </Grid>
 
-          {/* Right part of the screen (Blog Picture) */}
           <Grid item xs={12} md={6}>
             {blog && <img src={blog.cover} alt='cover' style={{ width: '100%' }} />}
           </Grid>
