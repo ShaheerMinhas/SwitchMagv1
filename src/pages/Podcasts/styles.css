@@ -1,0 +1,6 @@
+.divider {
+    /* Add a grey line (border) to act as a divider */
+    border-top: 1px solid #ccc; /* Change color and width as needed */
+    margin-top: 10px; /* Adjust spacing above the line as needed */
+    margin-bottom: 10px; /* Adjust spacing below the line as needed */
+  }
