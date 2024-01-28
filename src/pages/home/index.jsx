@@ -10,7 +10,6 @@ const Home = () => {
     <div>
     
       <Header />
-      <Navbar />
       <div className='divider'></div>
       <div className="blog-list-container">
         <BlogList blogs={blogList} />
