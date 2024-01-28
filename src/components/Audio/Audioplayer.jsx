@@ -20,7 +20,7 @@ const AudioPlayer = (props) => {
 
   return (
     <div>
-      {audioUrl && <audio controls src={audioUrl} />}
+      {audioUrl && <audio controls src={audioUrl} />}  
     </div>
   );
 };
