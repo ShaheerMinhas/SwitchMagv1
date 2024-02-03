@@ -4,12 +4,14 @@ import BlogList from '../../components/home/bloglist';
 import { blogList } from '../../config/data';
 import './styles.css'; // Import a CSS file for styling (create this file)
 import ContactUs from '../../components/ contact/Contactus';
+import Navbar from '../../components/navbar';
+
 const Home = () => {
   return (
     <div>
     
       <Header />
-      <div className='divider'></div>
+      <Navbar />
       <div className="blog-list-container">
         <BlogList blogs={blogList} />
       </div>

@@ -8,6 +8,7 @@ import './App.css';
 import PixelArtLoader from './components/common/loading/PixelArtLoader';
 import Blog from './pages/Blog';
 import theme from './components/common/Theme/Theme';
+import PodcastPage from './pages/podcast';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -42,6 +43,7 @@ function App() {
           <Route path="/blog/:id" element={<Blog />} />
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/podcast" element={<PodcastPage />} />
         </Routes>
       )}
     </div>
