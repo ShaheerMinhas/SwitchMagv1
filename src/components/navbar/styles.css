@@ -1,0 +1,27 @@
+/* styles.css */
+
+.navcontainer {
+    background-color: rgb(51, 51, 51);
+    color: white;
+  }
+  
+  .areanav {
+    color: #cfcfc4;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: inherit; /* Slightly larger font size */
+  }
+  
+  /* Media query for phones */
+ 
+@media only screen and (max-width: 600px) {
+  .navcontainer {
+    display: none; /* Hide the navcontainer on small screens */
+  }
+  
+  .areanav {
+    display: none; /* Hide the areanav on small screens */
+  }
+}
