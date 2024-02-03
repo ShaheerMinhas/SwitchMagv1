@@ -1,0 +1,25 @@
+.contact-form-container {
+    
+    margin-top: 1%;
+    margin-left: 3%;
+  }
+  .upperPortion{    
+    margin-left: 1%;
+    display: flex;
+    margin-top: 3%;
+  }
+  .contact-form {
+    width: 800px; /* Set the desired width for your form */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .word-count{
+    margin-bottom: 3%;
+  }
+  .feedback-input {
+    width: 100%;
+    padding-bottom: 7%;
+  }
+  
+  /* Add other styles as needed */
+  
