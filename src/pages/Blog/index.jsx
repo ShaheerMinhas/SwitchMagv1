@@ -60,11 +60,14 @@ const Blog = () => {
       </div>
       <div className="blog-text">
         <Typography>
+        
           {blog && (
             <ReactMarkdown>{blog.description}</ReactMarkdown>
           )}
         </Typography>
+        
       </div>
+      
       <ContactUs />
     </>
   );

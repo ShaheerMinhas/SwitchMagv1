@@ -10,6 +10,7 @@ import Blog from './pages/Blog';
 import theme from './components/common/Theme/Theme';
 import Podcasts from './pages/Podcasts/Podcasts';
 import Community from './pages/Community';
+import About from './pages/About';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -46,7 +47,8 @@ function App() {
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/podcast" element={<Podcasts />} />
           <Route path="/community" element={<Community />} />
-          
+          <Route path="/About" element={<About/>} />
+                    
         </Routes>
       )}
     </div>
