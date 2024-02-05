@@ -150,3 +150,14 @@ export const blogList = [
     audio: 'https://firebasestorage.googleapis.com/v0/b/audioplayer-33956.appspot.com/o/GanglionInterview.mp3?alt=media&token=5db75879-84d4-41d7-9b9b-b67e65f863fc'
   }
 ];
+export const AdminPictures=[
+  '/assets/images/Samra zafar.png',  
+  '/assets/images/Samra Zafar (5).png',
+  '/assets/images/Samra Zafar (6).png',
+  '/assets/images/Samra Zafar (2).png',
+  '/assets/images/Samra Zafar (8).png',
+  '/assets/images/Samra Zafar (3).png',
+  '/assets/images/Samra Zafar (4).png',
+  
+  
+]
