@@ -1,7 +1,7 @@
 // Navbar.jsx
 import React from 'react';
 import { AppBar, Toolbar, Button, Divider } from '@mui/material';
-import './styles.css';
+import './styless.css';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {

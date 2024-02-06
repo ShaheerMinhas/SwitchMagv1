@@ -42,7 +42,7 @@ function App() {
       ) : (
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/blog/:id" element={<Blog />} />
+          <Route path="/blog/:title" element={<Blog />} />
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/about" element={<About/>} />

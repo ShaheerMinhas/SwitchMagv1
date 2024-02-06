@@ -1,6 +1,10 @@
 import React from 'react';
 import { styled, Paper, Typography, TextField, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { signInWithEmailAndPassword } from '@firebase/auth';
+import { auth } from '../../firebase';
+import { useNavigate } from 'react-router-dom';
 const StyledPaper = styled(Paper)(({ theme }) => ({
   position: 'fixed',
   top: '50%',
@@ -27,35 +31,50 @@ const WhiteTextField = styled(TextField)({
 });
 
 const SignInForm = () => {
-  
-
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const Navigate = useNavigate();
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+      const user= userCredential.user;
+      console.log(user) 
+      Navigate('/')
+    }).catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage)
+    })
+  }
   return (
     <StyledPaper>
       <Typography variant="h5" gutterBottom>
         Sign In
       </Typography>
-      <form>
+      <form onSubmit={handleSubmit}>
         
-      <WhiteTextField
-          label="Email"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          required
-          type="name"
-        />
-       
         <WhiteTextField
-          label="Password"
-          variant="outlined"
-          margin="normal"
-          fullWidth
-          required
-          type="password"
-        />
-        <Button type="submit" variant="contained" color="primary" fullWidth>
-          Sign In
-        </Button>
+            label="Email"
+            variant="outlined"
+            margin="normal"
+            fullWidth
+            required
+            type="name"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        
+          <WhiteTextField
+            label="Password"
+            variant="outlined"
+            margin="normal"
+            fullWidth
+            required
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <Button type="submit" variant="contained" color="primary" fullWidth>
+            Sign In
+          </Button>
       </form>
       <Typography variant="body2" style={{ marginTop: '1rem' }}>
         Dont have an account?{' '}

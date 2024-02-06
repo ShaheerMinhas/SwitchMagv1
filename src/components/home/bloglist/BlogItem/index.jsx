@@ -21,7 +21,7 @@ const BlogItem = ({
   };
 
   return (
-    <Link className='blogItem-wrap' to={`/blog/${id}`} style={linkStyle}>
+    <Link className='blogItem-wrap' to={`/blog/${title}`} style={linkStyle}>
       <div>
         <img className='blogItem-cover' src={cover} alt='cover' />
         

@@ -17,4 +17,4 @@ const PixelArtLoader = () => {
   );
 };
 
-export default PixelArtLoader;
+export default PixelArtLoader 
