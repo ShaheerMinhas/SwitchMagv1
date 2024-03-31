@@ -25,7 +25,7 @@ const Navbar = () => {
             <Divider orientation="vertical" sx={{ mx: 2, backgroundColor: 'white', height: '100%' }} />
             
             <Link to="/podcast" className="nav-link">
-              <Button color="inherit">C o m m u n i t y</Button>
+              <Button color="inherit">C o u r s e s</Button>
             </Link>
             
             <Divider orientation="vertical" sx={{ mx: 2, backgroundColor: 'white', height: '100%' }} />
