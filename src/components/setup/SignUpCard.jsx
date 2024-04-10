@@ -1,6 +1,10 @@
 import React from 'react';
 import { styled, Paper, Typography, TextField, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { auth } from '../../firebase';
+import { createUserWithEmailAndPassword } from '@firebase/auth';
+import { updateProfile } from '@firebase/auth';
 const StyledPaper = styled(Paper)(({ theme }) => ({
   position: 'fixed',
   top: '50%',
@@ -27,9 +31,25 @@ const WhiteTextField = styled(TextField)({
 });
 
 const SignUpForm = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add logic to handle form submission
+    createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+      const User = userCredential.user;
+      updateProfile(User, {
+        displayName: name
+      }).then(() => {
+        console.log('User created')
+      }).catch((error) => {
+        console.log(error)
+      })
+    }).catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage)
+    })
   };
 
   return (
@@ -44,6 +64,7 @@ const SignUpForm = () => {
           margin="normal"
           fullWidth
           required
+          onChange={(e) => setName(e.target.value)}
         />
         <WhiteTextField
           label="Email"
@@ -52,6 +73,7 @@ const SignUpForm = () => {
           fullWidth
           required
           type="email"
+          onChange={(e) => setEmail(e.target.value)}
         />
         <WhiteTextField
           label="Password"
@@ -60,6 +82,7 @@ const SignUpForm = () => {
           fullWidth
           required
           type="password"
+          onChange={(e) => setPassword(e.target.value)}
         />
         <WhiteTextField
           label="Date of Birth"

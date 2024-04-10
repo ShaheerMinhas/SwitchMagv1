@@ -11,16 +11,22 @@ import Header from '../../components/home/header/Index';
 import ContactUs from '../../components/ contact/Contactus';
 import AudioPlayer from '../../components/Audio/Audioplayer';
 // ... (existing imports)
-
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from '../../firebase';
+import PixelArtLoader from '../../components/common/loading/PixelArtLoader';
 const Blog = () => {
-  const { id } = useParams();
+  const { title } = useParams();
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    let blog = blogList.find((blog) => blog.id === parseInt(id));
-    if (blog) {
-      setBlog(blog);
+    const getblog = async () => {
+      const q = query(collection(db, "blogs"), where("title", "==", title));
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        setBlog(doc.data());
+      });
     }
+    getblog();
   }, []);
 
   return (
@@ -48,7 +54,7 @@ const Blog = () => {
                   </div>
                 </div>
               ) : (
-                <EmptyList />
+                <PixelArtLoader/>
               )}
             </div>
           </Grid>
