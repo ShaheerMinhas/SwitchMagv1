@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getStorage } from 'firebase/storage';
-
+import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
     apiKey: "AIzaSyAEd85sgq3BxXRHo29YTSbkIjMKSDRHrjo",
     authDomain: "audioplayer-33956.firebaseapp.com",
@@ -13,5 +13,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
-
-export { storage, app as default };
+const db = getFirestore(app);
+export { storage, app, db as default };
