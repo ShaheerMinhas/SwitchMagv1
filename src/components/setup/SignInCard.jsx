@@ -1,6 +1,8 @@
 import React from 'react';
 import { styled, Paper, Typography, TextField, Button } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { getAuth,signInWithEmailAndPassword } from 'firebase/auth';
 const StyledPaper = styled(Paper)(({ theme }) => ({
   position: 'fixed',
   top: '50%',
@@ -27,14 +29,26 @@ const WhiteTextField = styled(TextField)({
 });
 
 const SignInForm = () => {
-  
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
+  const handlesignin = (e)=>{
+    e.preventDefault();
+    const Auth = getAuth();
+    signInWithEmailAndPassword(Auth, email, password).then((userCredential) => {
+      console.log(userCredential.user)
+      navigate('/admin')
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
   return (
     <StyledPaper>
       <Typography variant="h5" gutterBottom>
         Sign In
       </Typography>
-      <form>
+      <form onSubmit={handlesignin}>
         
       <WhiteTextField
           label="Email"
@@ -43,6 +57,7 @@ const SignInForm = () => {
           fullWidth
           required
           type="name"
+          onChange={(e) => setEmail(e.target.value)}
         />
        
         <WhiteTextField
@@ -52,6 +67,7 @@ const SignInForm = () => {
           fullWidth
           required
           type="password"
+          onChange={(e) => setPassword(e.target.value)}
         />
         <Button type="submit" variant="contained" color="primary" fullWidth>
           Sign In

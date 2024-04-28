@@ -10,8 +10,7 @@ import Blog from './pages/Blog';
 import theme from './components/common/Theme/Theme';
 import About from './pages/About';
 import PodcastPage from './pages/podcast';
-
-
+import Admin from './pages/Admin';
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -47,7 +46,9 @@ function App() {
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/about" element={<About/>} />
           <Route path="/podcast" element={<PodcastPage />} />
-
+          <Route path="/admin" element={<Admin />
+          } />
+          
         </Routes>
       )}
     </div>
